@@ -1,3 +1,12 @@
+/*
+███╗░░██╗███████╗███████╗██████╗░░█████╗░░░░░░██╗  ███╗░░░███╗██╗░██████╗██╗░░██╗██████╗░░█████╗░
+████╗░██║██╔════╝██╔════╝██╔══██╗██╔══██╗░░░░░██║  ████╗░████║██║██╔════╝██║░░██║██╔══██╗██╔══██╗
+██╔██╗██║█████╗░░█████╗░░██████╔╝███████║░░░░░██║  ██╔████╔██║██║╚█████╗░███████║██████╔╝███████║
+██║╚████║██╔══╝░░██╔══╝░░██╔══██╗██╔══██║██╗░░██║  ██║╚██╔╝██║██║░╚═══██╗██╔══██║██╔══██╗██╔══██║
+██║░╚███║███████╗███████╗██║░░██║██║░░██║╚█████╔╝  ██║░╚═╝░██║██║██████╔╝██║░░██║██║░░██║██║░░██║
+╚═╝░░╚══╝╚══════╝╚══════╝╚═╝░░╚═╝╚═╝░░╚═╝░╚════╝░  ╚═╝░░░░░╚═╝╚═╝╚═════╝░╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝
+*/
+
 #include<stdio.h>
 // #include<conio.h>
 // #include<stalib.h>
@@ -11,43 +20,58 @@ struct library {
 };
 
 int main () {
-    struct library l[100];;
-    char ar_nm[30] , bk_nm[30];
-    int i, j, keepcount;
-    i=j=keepcount=0;
+    struct library l[100];
+    char ar_nm[30], bk_nm[30];
+    int i, j, keepcount = 0;
+    int usernumber;
 
-    while (j!=6) {
-        printf("1) Add Book Information\n");
-        printf("2) Display Book Information\n");
-        printf("3) List All Books Of Given Author\n");
-        printf("4) List The Count Of Books In The Library\n");
-        printf("5) Exit\n");
+    printf("1) Add Book Information\n");
+    printf("2) Display Book Information\n");
+    printf("3) List All Books Of Given Author\n");
+    printf("4) List The Count Of Books In The Library\n");
+    printf("5) Exit LMS\n");
 
-    switch(j){
-        case 1:
-                printf("Enter The Book Name: \n");
-                scanf("%s",&l[i].bk_name);
+    printf("Enter A Number From Above For Doing That Operation!!.");
+    scanf("%d", %usernumber);
 
-                printf("Enter The Book Author: \n");
-                scanf("%s",&l[i].author);
+    if(usernumber == 1){
+        printf("Enter The Book Name: \n");
+        scanf("%s",&l[i].bk_name);
 
-                printf("Enter The Book Price : \n");
-                scanf("%f",&l[i].price);
+        printf("Enter The Book Author: \n");
+        scanf("%s",&l[i].author);
 
-                printf("Enter Number Of Pages: \n");
-                scanf("%d",&l[i].pages);
+        printf("Enter The Book Price : \n");
+        scanf("%f",&l[i].price);
 
-                keepcount++;
-                j++;                
-                // break;
-        case 2:
-                printf("Your Book Information Is As Follows =>");
+        printf("Enter Number Of Pages: \n");
+        scanf("%d",&l[i].pages);
+    } else if(usernumber == 2){
+                        printf("Your Book Information Is As Follows =>");
                 for(i=0; i<keepcount; i++){
                     printf("\nBook Name :- %s", l[i].bk_name);
                     printf("\nBook Author :- %s", l[i].author);
                     printf("\nPrice :- %f", l[i].price);
                     printf("\nNo. Of Pages :- %d", l[i].pages);
                 }
+        
+    } else if(usernumber==3){
+        exit(0);
+    }
+    return 0;
+}
+    
+/*
+    while (j!=6) {
+    switch(j){
+        case 1:
+
+
+                keepcount++;
+                j=2;                
+                // break;
+        case 2:
+
                 j++
                 // break;
 
@@ -70,3 +94,4 @@ int main () {
     }
     return 0;
 }
+*/
