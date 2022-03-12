@@ -72,8 +72,8 @@ int main () {
         printf("Total Number Of Books In Library Is :- %d Books\n", counterdd-1);
         printf("------------------------------------------------------------\n");
     } else if(usernumber==4){
-        printf("Exiting The LMS....");
-        printf("Coded By Neeraj Mishra");
+        printf("Exiting The LMS....\n");
+        printf("Coded By Neeraj Mishra\n");
         printf("------------------------------------------------------------\n");
         fclose(fptr);
         fclose(file);
