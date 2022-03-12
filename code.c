@@ -24,7 +24,7 @@ int main () {
     printf("1) Add Book Information\n");
     printf("2) Get All Books From Library\n");
     printf("3) Total Number Of Books\n");
-    printf("3) Exit LMS\n");
+    printf("4) Exit LMS\n");
     printf("------------------------------------------------------------");
     printf("\nEnter A Number From Above For Doing That Operation :- ");
     scanf("%d", &usernumber);
